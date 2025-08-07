@@ -8,8 +8,8 @@
 // Función declarativa que retorne el consumo mensual en kilovatios (por ejemplo, 410 kWh).
 
 function consumoMensual(){
-    let consumo = Number(prompt('Ingrese el consumo de kWh'))
-    return consumo
+    return Number(prompt('Ingrese el consumo de kWh'))
+    
 }
 
 let consumo = consumoMensual()
@@ -18,8 +18,8 @@ let consumo = consumoMensual()
 // (por ejemplo, 620 pesos por kWh).
 
 function tarifaBase(){
-    let tarifa = Number(prompt("Ingrese el valor del kWh: "))
-    return tarifa
+    return Number(prompt("Ingrese el valor del kWh: "))
+
 }
 
 
@@ -28,8 +28,8 @@ let tarifa = tarifaBase()
 // (por ejemplo, 3500 pesos).
 
 const cargoFijo = function(){
-    let cargo = Number(promt('Ingrese el valor cargo fijo por servicio: '))
-    return cargo
+    return Number(prompt('Ingrese el valor cargo fijo por servicio: '))
+    
 }
 
 let cargo = cargoFijo()
@@ -38,23 +38,22 @@ let cargo = cargoFijo()
 // Función de expresión que retorne el valor del IVA como porcentaje fijo 
 // (por ejemplo, 19).
 const valorIVA = function(){
-    let iva = Number(prompt("Ingrese el valor del iva: "))
-    return iva
+    return Number(prompt("Ingrese el valor del iva: "))
+    
 }
 
 let iva = valorIVA()
 // Función flecha que retorne el subtotal multiplicando consumo por tarifa.
 
 const calcularSubtotal = () => {
-    let subto = consumo * tarifa
-    return subto
+    return consumo * tarifa
+
 }
 
 let subtotal = calcularSubtotal()
 // Función flecha que retorne el valor del IVA aplicado sobre el subtotal.
 const valorSubtotalIVA = () =>{
-    let valorSubIVa = iva/100 * subtotal
-    return valorSubIVa
+    return iva/100 * subtotal
 }
 
 let valorSubIVA = valorSubtotalIVA()
@@ -62,10 +61,24 @@ let valorSubIVA = valorSubtotalIVA()
 
 // Función flecha que retorne el total a pagar sumando subtotal, IVA y cargo fijo.
 const totalPagarServicio = () => {
-    let valorPagar = subtotal + valorSubIVA + cargo
-    return valorPagar
+    return subtotal + valorSubIVA + cargo
 }
 
 let totalPagar = totalPagarServicio()
 // Función final (de cualquier tipo, tú eliges) que imprima en consola todos 
-// los resultados con descripciones claras (consumo, tarifa, subtotal, IVA, cargo fijo y total).
+// los resultados con descripciones claras 
+// (consumo, tarifa, subtotal, IVA, cargo fijo y total).
+// `
+function resultadoFinal(){
+    console.log(`Resumen
+
+Consumo del mes: ${consumo}kWh
+Tarifa fija del mes: ${tarifa}$/kWh
+Subtotal de consumo: $${subtotal}$
+Porcentaje IVA: %${iva}
+Valor IVA: $${valorSubIVA}
+El valor del cargo fijo es: $${cargo}
+El total a pagar es: $${totalPagar}`)
+}
+
+resultadoFinal()
