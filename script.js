@@ -52,6 +52,13 @@ const calcularSubtotal = () => {
 
 let subtotal = calcularSubtotal()
 // Función flecha que retorne el valor del IVA aplicado sobre el subtotal.
+const valorSubtotalIVA = () =>{
+    let valorSubIVa = iva/100 * subtotal
+    return valorSubIVa
+}
+
+let valorSubIVA = valorSubtotalIVA()
+
 
 // Función flecha que retorne el total a pagar sumando subtotal, IVA y cargo fijo.
 
