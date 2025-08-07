@@ -45,6 +45,12 @@ const valorIVA = function(){
 let iva = valorIVA()
 // Función flecha que retorne el subtotal multiplicando consumo por tarifa.
 
+const calcularSubtotal = () => {
+    let subto = consumo * tarifa
+    return subto
+}
+
+let subtotal = calcularSubtotal()
 // Función flecha que retorne el valor del IVA aplicado sobre el subtotal.
 
 // Función flecha que retorne el total a pagar sumando subtotal, IVA y cargo fijo.
