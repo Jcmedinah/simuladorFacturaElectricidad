@@ -17,6 +17,11 @@ function consumoMensual(){
 // Función declarativa que retorne la tarifa base por kilovatio 
 // (por ejemplo, 620 pesos por kWh).
 
+function tarifaBase(){
+    let tarifa = Number(prompt("Ingrese el valor del kWh: "))
+    return tarifa
+}
+
 // Función de expresión que retorne el cargo fijo por servicio 
 // (por ejemplo, 3500 pesos).
 
