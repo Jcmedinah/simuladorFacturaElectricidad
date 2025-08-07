@@ -61,6 +61,11 @@ let valorSubIVA = valorSubtotalIVA()
 
 
 // Función flecha que retorne el total a pagar sumando subtotal, IVA y cargo fijo.
+const totalPagarServicio = () => {
+    let valorPagar = subtotal + valorSubIVA + cargo
+    return valorPagar
+}
 
+let totalPagar = totalPagarServicio()
 // Función final (de cualquier tipo, tú eliges) que imprima en consola todos 
 // los resultados con descripciones claras (consumo, tarifa, subtotal, IVA, cargo fijo y total).
