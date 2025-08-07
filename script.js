@@ -12,7 +12,7 @@ function consumoMensual(){
     return consumo
 }
 
-
+let consumo = consumoMensual()
 
 // Función declarativa que retorne la tarifa base por kilovatio 
 // (por ejemplo, 620 pesos por kWh).
@@ -22,13 +22,18 @@ function tarifaBase(){
     return tarifa
 }
 
+
+let tarifa = tarifaBase()
 // Función de expresión que retorne el cargo fijo por servicio 
 // (por ejemplo, 3500 pesos).
 
 const cargoFijo = function(){
-    let cargoFijo = Number(promt('Ingrese el valor cargo fijo por servicio: '))
-    return cargoFijo
+    let cargo = Number(promt('Ingrese el valor cargo fijo por servicio: '))
+    return cargo
 }
+
+let cargo = cargoFijo()
+
 
 // Función de expresión que retorne el valor del IVA como porcentaje fijo 
 // (por ejemplo, 19).
@@ -37,7 +42,7 @@ const valorIVA = function(){
     return iva
 }
 
-
+let iva = valorIVA()
 // Función flecha que retorne el subtotal multiplicando consumo por tarifa.
 
 // Función flecha que retorne el valor del IVA aplicado sobre el subtotal.
