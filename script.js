@@ -25,6 +25,11 @@ function tarifaBase(){
 // Función de expresión que retorne el cargo fijo por servicio 
 // (por ejemplo, 3500 pesos).
 
+const cargoFijo = function(){
+    let cargoFijo = Number(promt('Ingrese el valor cargo fijo por servicio: '))
+    return cargoFijo
+}
+
 // Función de expresión que retorne el valor del IVA como porcentaje fijo 
 // (por ejemplo, 19).
 
