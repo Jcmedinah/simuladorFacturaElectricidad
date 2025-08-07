@@ -32,6 +32,11 @@ const cargoFijo = function(){
 
 // Función de expresión que retorne el valor del IVA como porcentaje fijo 
 // (por ejemplo, 19).
+const valorIVA = function(){
+    let iva = Number(prompt("Ingrese el valor del iva: "))
+    return iva
+}
+
 
 // Función flecha que retorne el subtotal multiplicando consumo por tarifa.
 
